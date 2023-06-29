@@ -232,7 +232,7 @@ GET {{host}}{{urlAsignatura}}
 
 
 ### Get Asignaturas by claseId
-GET {{host}}{{urlAsignatura}}/2
+GET {{host}}{{urlAsignatura}}/1
 
 ### crear Asignatura
 POST {{host}}{{urlAsignatura}}/1
@@ -250,13 +250,13 @@ GET  {{host}}{{urlAsignatura}}/alumnoAsignatura/1
 ### ALUMNOS ###
 
 ### Get alumnos by clase id falta el rol
-GET {{host}}{{urlAlumnos}}/2
+GET {{host}}{{urlAlumnos}}/9
 
 ### GET ALL alumnos in usuarios
 GET {{host}}{{urlAlumnos}}
 
 ###
-DELETE {{host}}{{urlAlumnos}}/2
+DELETE {{host}}{{urlAlumnos}}/28
 
 ### TUTOR ####
 

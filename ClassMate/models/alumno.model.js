@@ -27,7 +27,7 @@ const insertAlumnosByClassID = ({ alumno_id, clases_id }) => {
 }
 
 const deleteAlumnoById = (idAlumno) => {
-    return db.query(`DELETE FROM alumnos_has_clases WHERE id =?;`, [idAlumno])
+    return db.query(`DELETE FROM alumnos_has_clases WHERE alumno_id =?;`, [idAlumno])
 }
 
 module.exports = {
