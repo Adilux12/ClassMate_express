@@ -21,7 +21,7 @@ POST {{host}}{{urlusuarios}}/login
 Content-Type: application/json
 
 { 
-"email": "tutor@mail.com",
+"email": "antonia@mail.com",
 "password": "12345"
 }
 
@@ -34,9 +34,9 @@ Content-Type: application/json
  "nombre": "Pepe", 
 "apellidos": "Sanchez", 
 "dni": "87654321A", 
-"email": "pepe@gmail.com",
+"email": "pepote@gmail.com",
 "password": "12345",
-"rol":"alumno", 
+"rol":"profesor", 
 "genero":"f", 
 "direccion":"calle1",
 "nacimiento":"1998-01-01"  
@@ -51,7 +51,7 @@ Content-Type: application/json
 "apellidos": "antonia",
 "direccion": "calle",
 "dni": "12354674K",
-"email": "madre@mail.com",
+"email": "antonia@mail.com",
 "genero": "f",
 "nacimiento": "2023-04-21",
 "nombre": "Antonia",

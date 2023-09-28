@@ -1,12 +1,16 @@
 const { createToken } = require('../../helpers/utils');
+const bcrypt = require('bcrypt');
 const { create, getByEmail, getByTutorId, getTutor, getById, getTutorByName, getGeneroByID } = require('../../models/usuario.model');
 
 const router = require('express').Router();
 
+const saltRounds = 10;
 //Regitro de usuario
 router.post('/registro', async (req, res) => {
     //res.send('Funciona')
     try {
+        const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
+        req.body.password = hashedPassword;
         const [result] = await create(req.body);
         res.json(result);
 
@@ -26,6 +30,11 @@ router.post('/login', async (req, res) => {
         }
 
         const usuario = result[0];
+
+        const contraseñaValida = await bcrypt.compare(req.body.password, usuario.password);
+        if (!contraseñaValida) {
+            return res.json({ fatal: 'Error en contraseña o email' })
+        }
         console.log(usuario);
 
         res.json({
